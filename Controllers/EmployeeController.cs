@@ -19,6 +19,7 @@ namespace EmployeeAPI.Controllers
         {
             e_serv = _e_serv;
         }
+        [Route("/getAll")]
         [HttpGet]
         public async Task<IActionResult> GetAllEmployees()
         {
