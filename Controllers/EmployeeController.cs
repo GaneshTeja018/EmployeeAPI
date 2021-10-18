@@ -21,7 +21,7 @@ namespace EmployeeAPI.Controllers
         }
         [Route("getAll")]
         [HttpGet]
-        public IActionResult GetAllEmployees()
+        public async Task<IActionResult> GetAllEmployees()
         {
             _log4net.Info($"Getting All the Employee ");
             return Ok(await e_serv.GetAllEmployees());
