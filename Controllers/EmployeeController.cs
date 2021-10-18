@@ -23,17 +23,8 @@ namespace EmployeeAPI.Controllers
         [HttpGet]
         public IActionResult GetAllEmployees()
         {
-        Employee e=new Employee();
-        e.Name="Bala";
-        e.Age=21;
-        e.Address="Kumbakonam";
-        e.WorkLocation="chennai";
-        e.PhoneNumber="9994632276";
-        e.EmployeeMail="bala@gmail.com";
-        e.EmployeePassword="1234";
-        return Ok(e);
-            //_log4net.Info($"Getting All the Employee ");
-            //return Ok(await e_serv.GetAllEmployees());
+            _log4net.Info($"Getting All the Employee ");
+            return Ok(await e_serv.GetAllEmployees());
         }
         [HttpPost]
         public async Task<IActionResult> AddEmpl(Employee e)
